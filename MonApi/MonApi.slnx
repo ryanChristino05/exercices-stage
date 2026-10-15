@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../MonApi.Tests/MonApi.Tests.csproj" />
+  <Project Path="MonApi.csproj" />
+</Solution>
