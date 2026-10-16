@@ -5,10 +5,10 @@ using System.Text;
 using MonApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers(); // Enregistre les services des contrôleurs
 
-builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(
+    options.UseNpgsql(
         builder.Configuration.GetConnectionString("DefaultConnection")
     )
 );
